@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    show-sql: true  # 실행되는 SQL 쿼리를 출력하도록 설정
+    properties:
+      format_sql: true  # 출력되는 SQL 쿼리를 읽기 쉽게 포맷팅
+      dialect: org.hibernate.dialect.MySQL8Dialect  # Hibernate가 MySQL 8.x에 맞는 SQL을 생성하도록 설정
+    hibernate:
+      ddl-auto: validate  # 애플리케이션 시작 시 데이터베이스 스키마를 검증 (생성, 업데이트, 삭제 등 수행하지 않음)
+  datasource:
+    url: jdbc:mysql://localhost:3306/delivery?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    # 데이터베이스 URL 설정
+    # useSSL=false: SSL 사용 안 함
+    # useUnicode=true: 유니코드 사용 설정
+    # allowPublicKeyRetrieval=true: MySQL 서버의 공개 키를 사용할 수 있도록 설정
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL JDBC 드라이버 클래스 이름
+    username: root  # 데이터베이스 접속에 사용할 사용자 이름
+    password: root1234!!  # 데이터베이스 접속에 사용할 비밀번호
